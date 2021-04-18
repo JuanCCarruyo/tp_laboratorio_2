@@ -80,7 +80,7 @@ namespace Entidades
                         retNum += (double)Math.Pow(2, i);
                     }
                 }
-                ret = retNum.ToString();
+                ret = Math.Abs(retNum).ToString();
             }
             else
             {
@@ -94,16 +94,17 @@ namespace Entidades
         {
             string resto = ""; 
             string cadenaInvertida = ""; //como son string se va concatenando los numeros en los for
-            int n;
+            double n;
 
             if (Numero.EsBinario(numero) == false)
             {
-                if (int.TryParse(numero, out n) == true)
+                if (double.TryParse(numero, out n) == true)
                 {
+                    n = Math.Abs(Math.Floor(n));
                     for (; n >= 2;) //se repite siempre que el cociente sea >= 2
                     {
                         resto += n % 2; //obtenemos el resto de la division 
-                        n = n / 2;    //obtenemos cociente
+                        n = (int)n / 2;    //obtenemos cociente
                     }
                     resto += n;
 

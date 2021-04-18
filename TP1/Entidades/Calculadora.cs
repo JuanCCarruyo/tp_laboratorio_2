@@ -16,7 +16,6 @@ namespace Entidades
             if (char.TryParse(operador, out op))
             {
                 operador = Calculadora.ValidarOperador(op);
-            
 
             switch (operador)
             {

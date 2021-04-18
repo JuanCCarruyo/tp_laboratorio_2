@@ -23,18 +23,28 @@ namespace TP1
             Numero numero1 = new Numero(txtNumero1.Text);
             Numero numero2 = new Numero(txtNumero2.Text);
 
-            lblResultado.Text = Calculadora.Operar(numero1, numero2, cmbOperador.Text).ToString();
-
+            if(cmbOperador.Text == "")
+            {
+                lblResultado.Text = "Ingresar operador.";
+                //cmbOperador.Text = "+";
+            }
+            else
+            {
+                lblResultado.Text = Calculadora.Operar(numero1, numero2, cmbOperador.Text).ToString();
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            lblResultado.Text = "";
+            cmbOperador.Text = "";
+            txtNumero1.Text = "";
+            txtNumero2.Text = "";
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
