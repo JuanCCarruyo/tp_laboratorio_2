@@ -96,8 +96,8 @@ namespace Entidades
             string cadenaInvertida = ""; //como son string se va concatenando los numeros en los for
             double n;
 
-            if (Numero.EsBinario(numero) == false)
-            {
+         //   if (Numero.EsBinario(numero) == false) este chequeo no funciona porque toma numeros como "100" como binario y no hace la conversion
+         //   {
                 if (double.TryParse(numero, out n) == true)
                 {
                     n = Math.Abs(Math.Floor(n));
@@ -112,7 +112,7 @@ namespace Entidades
                     {
                         cadenaInvertida += resto[i];
                     }
-                }
+          //      }
             }
             else
             {
