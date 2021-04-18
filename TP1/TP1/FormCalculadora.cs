@@ -36,7 +36,7 @@ namespace TP1
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = "";
+            lblResultado.Text = "0";
             cmbOperador.Text = "";
             txtNumero1.Text = "";
             txtNumero2.Text = "";
@@ -49,7 +49,7 @@ namespace TP1
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            if(double.TryParse(lblResultado.Text, out double num))
+            if(!(lblResultado.Text.Equals("0")) && double.TryParse(lblResultado.Text, out double num))
             {
                 lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
             }
