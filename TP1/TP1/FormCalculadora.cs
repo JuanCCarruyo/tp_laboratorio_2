@@ -53,7 +53,6 @@ namespace TP1
             {
                 lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
             }
-
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
